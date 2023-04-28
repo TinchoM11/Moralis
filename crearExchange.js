@@ -3,10 +3,10 @@ const Web3 = require("web3");
 const ethers = require("ethers");
 
 var params = JSON.stringify({
-  currency_from: "avaxc",
-  currency_to: "matic",
+  currency_from: "matic",
+  currency_to: "avaxc",
   address_to: "0xfc5b53e9CC21DDD2E3573c365e97C5DcbC685238", // EN QUE ADDRESS QUERES RECIBIR EL TOKEN DE SALIDA?
-  amount_from: "0.11",
+  amount_from: "5",
 });
 
 const API_KEY = "b00b5cdf-109d-4c5b-9480-78c4db49096b";
@@ -43,9 +43,9 @@ axios(config)
 // Send Matic from Matic address to Matic address
 async function transferMatic(address_to, amount) {
 
-  // ´PONER LA URL DEL RPC DE LA CADENA QUE SEA
+  // ´PONER LA URL DEL RPC DE LA CADENA QUE MANDES (CADENA DE ORIGEN)
   const polyConnection = new Web3(
-    "https://polished-divine-resonance.avalanche-mainnet.quiknode.pro/930f2c60323229f477c9f3e60d9f04bf1356d081/ext/bc/C/rpc"
+    "https://blue-fragrant-needle.matic.quiknode.pro/398157348b1378b7e59f4ccf29e1b10706fe8d97/"
   );
 
   console.log(address_to, amount)
@@ -61,7 +61,7 @@ async function transferMatic(address_to, amount) {
 
   const amountToSend = ethers.utils.parseEther(amount.toString());
   console.log(amountToSend)
-  const gas = (40000 * Math.pow(1.14, 0)).toFixed();
+  const gas = (21000 * Math.pow(1.14, 0)).toFixed();
   console.log("Gas", gas)
 
   const tx = await polyConnection.eth.accounts.signTransaction(

@@ -1,7 +1,7 @@
 var axios = require('axios');
 
 const API_KEY = "b00b5cdf-109d-4c5b-9480-78c4db49096b"
-const idExchange = "sPudW6EgkS"
+const idExchange = "Yfv0ZfC1xs"
 
 var config = {
   method: 'get',
@@ -16,6 +16,7 @@ axios(config)
   console.log("To:", response.data.amount_to, response.data.currency_to);
   console.log("Fecha Creaction:", response.data.timestamp);
   console.log("Estado:", response.data.status);
+  console.log("Hash de Tx Final en cadena destino", response.data.tx_to ? response.data.tx_to : undefined )
 })
 .catch(function (error) {
   console.log(error);
