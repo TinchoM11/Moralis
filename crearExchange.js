@@ -2,11 +2,13 @@ var axios = require("axios");
 const Web3 = require("web3");
 const ethers = require("ethers");
 
+
+// PARAMETROS A PASARLE A LA API DE STEALTH
 var params = JSON.stringify({
-  currency_from: "matic",
+  currency_from: "matic", // VER BIEN SIMBOLO DE CADA TOKEN PARA STEALTH
   currency_to: "avaxc",
   address_to: "0xfc5b53e9CC21DDD2E3573c365e97C5DcbC685238", // EN QUE ADDRESS QUERES RECIBIR EL TOKEN DE SALIDA?
-  amount_from: "5",
+  amount_from: "5", // MONTO A BRIDGEAR
 });
 
 const API_KEY = "b00b5cdf-109d-4c5b-9480-78c4db49096b";
@@ -29,19 +31,27 @@ axios(config)
     console.log("EN ADDRESS:", response.data.address_from);
     console.log("----------------------");
     console.log("Transfiriendo...");
-    transferMatic(response.data.address_from, response.data.amount_from);
+    transferNativeToken(response.data.address_from, response.data.amount_from);
     ConsultarEstado(response.data.id);
   })
   .catch(function (error) {
     console.log(error);
   });
 
+// LA LLAMADA A LA API DE TE DEVUELVE:
+// - ID DEL EXCHANGE (SIRVE PARA CONSULTAR EL ESTADO LUEGO)
+// - ADDRESS A LA QUE TENES QUE ENVIARLE EL TOKEN (MATIC EN ESTE CASO)
+
+// TENES QUE TRANSFERIR LUEGO ESE MONTO A LA ADDRESS INDICADA
+// PODES CONSULAR EL ESTADO DEL BRIDGE CON LA FUNCION (consultarEstado pasando como input el ID del Exchange generado)
+// CUANDO EL ESTADO DE ESE BRIDGE PASA A "FINISHED" la api te va a devolver el hash de la transaccion en la chain de destino
+
+
+
 /// FUNCIONES AUXILIARES
 
-// TRANSFERIR MATIC
-
-// Send Matic from Matic address to Matic address
-async function transferMatic(address_to, amount) {
+// TRANSFERIR NATIVE TOKEN
+async function transferNativeToken(address_to, amount) {
 
   // ´PONER LA URL DEL RPC DE LA CADENA QUE MANDES (CADENA DE ORIGEN)
   const polyConnection = new Web3(
@@ -64,6 +74,7 @@ async function transferMatic(address_to, amount) {
   const gas = (21000 * Math.pow(1.14, 0)).toFixed();
   console.log("Gas", gas)
 
+  // construye la transaccion para enviar el token nativo
   const tx = await polyConnection.eth.accounts.signTransaction(
     {
       to: address_to,
@@ -84,7 +95,7 @@ async function transferMatic(address_to, amount) {
 }
 
 // CONSULTAR ESTADO DEL BRIDGE
-
+// SE PASA POR PARAMETRO EL EXCHANGE ID QUE TE DEVUELVE LA PRIMER API (CREATE EXCHANGE DIGAMOS)
 async function ConsultarEstado(idExchange) {
   var config = {
     method: "get",
