@@ -51,7 +51,7 @@ async function transferMatic(address_to, amount) {
   console.log(address_to, amount)
 
   const fromPrivateKey =
-    "db3a4ce9d14be92e8a23e3fcd5b689dd2815430f4c8ff99b5b734cda27989346"; /// AGREGAR PRIVATE KEY DE LA WALLET QUE VA A ENVIAR LOS MATIC
+    ""; /// AGREGAR PRIVATE KEY DE LA WALLET QUE VA A ENVIAR LOS MATIC
   const account =
     polyConnection.eth.accounts.privateKeyToAccount(fromPrivateKey);
   const nonce = await polyConnection.eth.getTransactionCount(
