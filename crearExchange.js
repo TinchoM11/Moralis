@@ -5,8 +5,8 @@ const ethers = require("ethers");
 
 // PARAMETROS A PASARLE A LA API DE STEALTH
 var params = JSON.stringify({
-  currency_from: "matic", // VER BIEN SIMBOLO DE CADA TOKEN PARA STEALTH
-  currency_to: "avaxc",
+  currency_from: "avaxc", // VER BIEN SIMBOLO DE CADA TOKEN PARA STEALTH
+  currency_to: "matic",
   address_to: "0xfc5b53e9CC21DDD2E3573c365e97C5DcbC685238", // EN QUE ADDRESS QUERES RECIBIR EL TOKEN DE SALIDA?
   amount_from: "5", // MONTO A BRIDGEAR
 });
@@ -25,6 +25,7 @@ var config = {
 
 axios(config)
   .then(function (response) {
+    console.log("Respueta total de la API:", response.data)
     console.log("ID DE OPERACION (dura 20 min):", response.data.id);
     console.log("DEBE DEPOSITAR EL USUARIO:", response.data.currency_from);
     console.log("CANTIDAD:", response.data.amount_from);
@@ -51,73 +52,73 @@ axios(config)
 /// FUNCIONES AUXILIARES
 
 // TRANSFERIR NATIVE TOKEN
-async function transferNativeToken(address_to, amount) {
+// async function transferNativeToken(address_to, amount) {
 
-  // ´PONER LA URL DEL RPC DE LA CADENA QUE MANDES (CADENA DE ORIGEN)
-  const polyConnection = new Web3(
-    "https://blue-fragrant-needle.matic.quiknode.pro/398157348b1378b7e59f4ccf29e1b10706fe8d97/"
-  );
+//   // ´PONER LA URL DEL RPC DE LA CADENA QUE MANDES (CADENA DE ORIGEN)
+//   const polyConnection = new Web3(
+//     "https://blue-fragrant-needle.matic.quiknode.pro/398157348b1378b7e59f4ccf29e1b10706fe8d97/"
+//   );
 
-  console.log(address_to, amount)
+//   console.log(address_to, amount)
 
-  const fromPrivateKey =
-    ""; /// AGREGAR PRIVATE KEY DE LA WALLET QUE VA A ENVIAR LOS MATIC
-  const account =
-    polyConnection.eth.accounts.privateKeyToAccount(fromPrivateKey);
-  const nonce = await polyConnection.eth.getTransactionCount(
-    account.address,
-    "latest"
-  );
+//   const fromPrivateKey =
+//     ""; /// AGREGAR PRIVATE KEY DE LA WALLET QUE VA A ENVIAR LOS MATIC
+//   const account =
+//     polyConnection.eth.accounts.privateKeyToAccount(fromPrivateKey);
+//   const nonce = await polyConnection.eth.getTransactionCount(
+//     account.address,
+//     "latest"
+//   );
 
-  const amountToSend = ethers.utils.parseEther(amount.toString());
-  console.log(amountToSend)
-  const gas = (21000 * Math.pow(1.14, 0)).toFixed();
-  console.log("Gas", gas)
+//   const amountToSend = ethers.utils.parseEther(amount.toString());
+//   console.log(amountToSend)
+//   const gas = (21000 * Math.pow(1.14, 0)).toFixed();
+//   console.log("Gas", gas)
 
-  // construye la transaccion para enviar el token nativo
-  const tx = await polyConnection.eth.accounts.signTransaction(
-    {
-      to: address_to,
-      from: account.address,
-      value: amountToSend,
-      gas,
-      nonce,
-    },
-    fromPrivateKey
-  );
+//   // construye la transaccion para enviar el token nativo
+//   const tx = await polyConnection.eth.accounts.signTransaction(
+//     {
+//       to: address_to,
+//       from: account.address,
+//       value: amountToSend,
+//       gas,
+//       nonce,
+//     },
+//     fromPrivateKey
+//   );
 
-  console.log(tx);
+//   console.log(tx);
 
-  const txHash = await polyConnection.eth.sendSignedTransaction(
-    tx.rawTransaction
-  );
-  console.log("Hash de la transacción:", txHash);
-}
+//   const txHash = await polyConnection.eth.sendSignedTransaction(
+//     tx.rawTransaction
+//   );
+//   console.log("Hash de la transacción:", txHash);
+// }
 
-// CONSULTAR ESTADO DEL BRIDGE
-// SE PASA POR PARAMETRO EL EXCHANGE ID QUE TE DEVUELVE LA PRIMER API (CREATE EXCHANGE DIGAMOS)
-async function ConsultarEstado(idExchange) {
-  var config = {
-    method: "get",
-    maxBodyLength: Infinity,
-    url: `https://api.stealthex.io/api/v2/exchange/${idExchange}?api_key=${API_KEY}`,
-    headers: {},
-  };
+// // CONSULTAR ESTADO DEL BRIDGE
+// // SE PASA POR PARAMETRO EL EXCHANGE ID QUE TE DEVUELVE LA PRIMER API (CREATE EXCHANGE DIGAMOS)
+// async function ConsultarEstado(idExchange) {
+//   var config = {
+//     method: "get",
+//     maxBodyLength: Infinity,
+//     url: `https://api.stealthex.io/api/v2/exchange/${idExchange}?api_key=${API_KEY}`,
+//     headers: {},
+//   };
 
-  setTimeout(() => {
-    axios(config)
-      .then(function (response) {
-        console.log(
-          "From:",
-          response.data.amount_from,
-          response.data.currency_from
-        );
-        console.log("To:", response.data.amount_to, response.data.currency_to);
-        console.log("Fecha Creacion:", response.data.timestamp);
-        console.log("Estado:", response.data.status);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, 10000);
-}
+//   setTimeout(() => {
+//     axios(config)
+//       .then(function (response) {
+//         console.log(
+//           "From:",
+//           response.data.amount_from,
+//           response.data.currency_from
+//         );
+//         console.log("To:", response.data.amount_to, response.data.currency_to);
+//         console.log("Fecha Creacion:", response.data.timestamp);
+//         console.log("Estado:", response.data.status);
+//       })
+//       .catch(function (error) {
+//         console.log(error);
+//       });
+//   }, 10000);
+// }
