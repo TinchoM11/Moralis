@@ -14,17 +14,7 @@ async function getMoralis() {
   return Moralis;
 }
 
-// const moralisStart = async () => {
-//   await Moralis.start({
-//     apiKey: "hidsb5I8O2CamlUZlHwMvyZe1Amf3U9y03C7CfmwibWjTgXfDVejNZFf3Nom4ACc",
-//     // ...and any other configuration
-//   });
-//   moralisOK = true;
-// };
-
-//moralisStart();
-
-const runApp = async () => {
+const moralisGetTokenBalances = async () => {
   if (!Moralis.Core.isStarted) getMoralis();
   const address = "0xB4b38fbB72bcB2686202a9746C19521c24f0F35d";
 
@@ -39,7 +29,7 @@ const runApp = async () => {
   });
 };
 
-const runApp2 = async () => {
+const moralisGetNativeBalances = async () => {
   if (!Moralis.Core.isStarted) getMoralis();
   const address = "0xB4b38fbB72bcB2686202a9746C19521c24f0F35d";
   console.log("CHAIN", EvmChain.FANTOM)
@@ -51,7 +41,7 @@ const runApp2 = async () => {
   console.log("NATIVOS:", response.raw);
 };
 
-const runApp3 = async () => {
+const moralisGetNFTBalances = async () => {
   if (!Moralis.Core.isStarted) getMoralis();
   const address = "0x3c01F79256EDF0E643C92cb87A2F0E26B16e2067";
 
@@ -72,7 +62,7 @@ const runApp3 = async () => {
   });
 };
 
-const priceGetter = async () => {
+const GetTokenPriceMoralis = async () => {
   const address = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
 
   const response = await Moralis.EvmApi.token.getTokenPrice({
@@ -85,7 +75,7 @@ const priceGetter = async () => {
   console.log(response.toJSON().nativePrice?.value);
 };
 
-const inchGetter = async () => {
+const inchPriceGetter = async () => {
   const address = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
   const amount = 1000000000000000000;
 
@@ -100,19 +90,8 @@ const inchGetter = async () => {
   );
 };
 
-const incheGetter2 = async () => {
-  const address = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
-  const amount = 8127072;
-  let UsdcAddresses = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
 
-  const res = axios.get(
-    `https://pathfinder.1inch.io/v1.4/chain/250/router/v5/quotes?fromTokenAddress=${address}&toTokenAddress=${UsdcAddresses}&amount=${amount.toString()}`
-  );
-
-  console.log(res.data);
-};
-
-const liFi = async () => {
+const liFiQuote = async () => {
   const LIFI_API_URL = "https://li.quest/v1";
 
   const Token = "0x321162Cd933E2Be498Cd2267a90534A804051b11";
@@ -134,7 +113,7 @@ const liFi = async () => {
   console.log(quote);
 };
 
-const getReceipt = async () => {
+const stackUpDataAPI = async () => {
   let userOpHash =
     "0x0eb8b6596b5dd52fe4538c33026e4df3391572302c12145bad53f3a9909b4d3c";
 
@@ -187,13 +166,8 @@ const getOperation = async () => {
     try {
       res = await axios.request(config);
     } catch (error) {
-      // Si hay un error de red, continúa con la siguiente iteración del ciclo
       continue;
     }
-    // if (res.data === undefined || res.data.error) {
-    //   // Si la respuesta es nula o contiene errores, continúa con la siguiente iteración del ciclo
-    //   continue;
-    // }
     respuesta = res.data.data;
     if (respuesta !== null) {
       // Si se encuentra una respuesta válida, sale del ciclo
@@ -207,7 +181,7 @@ const getOperation = async () => {
 };
 
 
-export const odosPrice = async () => {
+export const odosPriceGetter = async () => {
 
   const data = JSON.stringify({
     chainId: 250,
@@ -244,10 +218,15 @@ export const odosPrice = async () => {
 };
 
 
-odosPrice()
-//getOperation();
-//runApp();
-//runApp2();
-// runApp3();
+// call all functions on this file one by one
+odosPriceGetter();
+getOperation();
+stackUpDataAPI();
+isAvalancheAlive();
+stackUpDataAPI();
+liFiQuote();
+moralisGetNFTBalances();
+moralisGetNativeBalances();
+moralisGetTokenBalances()
+GetTokenPriceMoralis();
 
-//priceGetter();
