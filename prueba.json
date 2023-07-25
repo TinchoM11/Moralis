@@ -1,0 +1,279 @@
+{
+  "status": "PROCESSING",
+  "route": {
+    "id": "babc480740b",
+    "toAddress": "0xF8B56939fF7246142211Ab7b136EB2Ea061046e5",
+    "fromBalances": [
+      {
+        "address": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+        "amount": "500000000000000",
+        "price": "154963",
+        "chain": "BINANCE",
+        "tokenMetadata": {
+          "chain": "BINANCE",
+          "address": "0x0000000000000000000000000000000000000000",
+          "logoURI": "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c_1.png",
+          "decimals": 18,
+          "name": "BNB",
+          "symbol": "BNB"
+        }
+      },
+      {
+        "address": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+        "amount": "100000000000000000",
+        "price": "100000",
+        "chain": "BINANCE",
+        "tokenMetadata": {
+          "chain": "BINANCE",
+          "symbol": "USDC",
+          "name": "USD Coin (PoS)",
+          "decimals": 18,
+          "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+          "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+        }
+      }
+    ],
+    "toAmount": "149999999999999994",
+    "status": "PROCESSING",
+    "toChain": "BINANCE",
+    "toToken": {
+      "chain": "BINANCE",
+      "symbol": "BSC-USD",
+      "name": "BSC-USD",
+      "decimals": 18,
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+    },
+    "estimate": {
+      "time": 1.5,
+      "costUsd": 0.43736200000000003,
+      "ethGas": "0",
+      "maticGas": "0",
+      "bscGas": "1411272000000000",
+      "solGas": "0"
+    },
+    "batches": [
+      {
+        "description": "Swap to target token",
+        "status": "PROCESSING",
+        "afterBalances": [
+          {
+            "address": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+            "amount": "90282297884047300",
+            "price": "90282",
+            "chain": "BINANCE",
+            "tokenMetadata": {
+              "chain": "BINANCE",
+              "symbol": "USDC",
+              "name": "USD Coin (PoS)",
+              "decimals": 18,
+              "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+              "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+            }
+          },
+          {
+            "address": "0xa81d8dd4550ee126ab77de7845b4359aa7afae22",
+            "amount": "165003628251175680",
+            "price": "165104",
+            "chain": "BINANCE",
+            "tokenMetadata": {
+              "chain": "BINANCE",
+              "symbol": "BSC-USD",
+              "name": "BSC-USD",
+              "decimals": 18,
+              "address": "0x55d398326f99059fF775485246999027B3197955",
+              "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "swapData": {
+              "fromChain": "BINANCE",
+              "fromAddress": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+              "fromToken": {
+                "chain": "BINANCE",
+                "symbol": "BNB",
+                "name": "BNB",
+                "decimals": 18,
+                "address": "0x0000000000000000000000000000000000000000",
+                "logoURI": "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c_1.png"
+              },
+              "toToken": {
+                "chain": "BINANCE",
+                "symbol": "BSC-USD",
+                "name": "BSC-USD",
+                "decimals": 18,
+                "address": "0x55d398326f99059fF775485246999027B3197955",
+                "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+              },
+              "fromAmount": "500000000000000",
+              "toAmount": "155288355463574944",
+              "estimatedGas": "232040"
+            },
+            "estimate": {
+              "time": 0.5,
+              "costUsd": 0.215727,
+              "ethGas": "0",
+              "maticGas": "0",
+              "bscGas": "696120000000000",
+              "solGas": "0"
+            },
+            "status": "PROCESSING",
+            "type": "SWAP",
+            "swapResponse": {
+              "data": {
+                "toAmount": "155288355463574944",
+                "fromAmount": "500000000000000",
+                "fromChain": "BINANCE",
+                "fromAddress": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+                "fromToken": {
+                  "chain": "BINANCE",
+                  "symbol": "BNB",
+                  "name": "BNB",
+                  "decimals": 18,
+                  "address": "0x0000000000000000000000000000000000000000",
+                  "logoURI": "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c_1.png"
+                },
+                "toToken": {
+                  "chain": "BINANCE",
+                  "symbol": "BSC-USD",
+                  "name": "BSC-USD",
+                  "decimals": 18,
+                  "address": "0x55d398326f99059fF775485246999027B3197955",
+                  "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+                },
+                "userOperationHash": "0xb7b6cb505d698d27e676a395eb847289e7b93646af944465b9c9fc21e8727476",
+                "approveTxHash": null,
+                "swapTxHash": null,
+                "approveStatus": "SUCCESS",
+                "swapStatus": "PROCESSING",
+                "status": "PROCESSING"
+              },
+              "error": null
+            }
+          },
+          {
+            "swapData": {
+              "fromChain": "BINANCE",
+              "fromAddress": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+              "fromToken": {
+                "chain": "BINANCE",
+                "symbol": "USDC",
+                "name": "USD Coin (PoS)",
+                "decimals": 18,
+                "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+                "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+              },
+              "toToken": {
+                "chain": "BINANCE",
+                "symbol": "BSC-USD",
+                "name": "BSC-USD",
+                "decimals": 18,
+                "address": "0x55d398326f99059fF775485246999027B3197955",
+                "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+              },
+              "fromAmount": "9717702115952700",
+              "toAmount": "9715272787600736",
+              "estimatedGas": "217384"
+            },
+            "estimate": {
+              "time": 0.5,
+              "costUsd": 0.202106,
+              "ethGas": "0",
+              "maticGas": "0",
+              "bscGas": "652152000000000",
+              "solGas": "0"
+            },
+            "status": "PROCESSING",
+            "type": "SWAP",
+            "swapResponse": {
+              "data": null,
+              "error": "processing response error (body=\"{\\\"error\\\":{\\\"code\\\":-32500,\\\"data\\\":{\\\"OpIndex\\\":0,\\\"Reason\\\":\\\"AA25 invalid account nonce\\\"},\\\"message\\\":\\\"AA25 invalid account nonce\\\"},\\\"id\\\":42,\\\"jsonrpc\\\":\\\"2.0\\\"}\", error={\"code\":-32500,\"data\":{\"OpIndex\":0,\"Reason\":\"AA25 invalid account nonce\"}}, requestBody=\"{\\\"method\\\":\\\"pm_sponsorUserOperation\\\",\\\"params\\\":[{\\\"sender\\\":\\\"0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22\\\",\\\"nonce\\\":\\\"0x32\\\",\\\"initCode\\\":\\\"0x\\\",\\\"callData\\\":\\\"0x18dfb3c7000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000020000000000000000000000008ac76a51cc950d9822d68b83fe1ad97b32cd580d0000000000000000000000009f138be5aa5cc442ea7cc7d18cd9e30593ed90b90000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000044095ea7b30000000000000000000000009f138be5aa5cc442ea7cc7d18cd9e30593ed90b900000000000000000000000000000000000000000000000000228632d6a7883c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002a4f17a454600000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000000000000000000000000cdc96fd2791da620741200000000000000000000000000000000000000000000c79cfe6332ec20000000000000000000000000000000c9f011d33c5878ac0b6085fe98a1a099fbf771b60000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000008ac76a51cc950d9822d68b83fe1ad97b32cd580d00000000000000000000000000000000000000000000000000228632d6a7883c000000000000000000000000c9f011d33c5878ac0b6085fe98a1a099fbf771b600000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000055d398326f99059ff775485246999027b31979550000000000000000000000000000000000000000000000000000000005f654d9000000000000000000000000a81d8dd4550ee126ab77de7845b4359aa7afae22000000000000000000000000000000000000000000000000000000000000005c01020400160101010203ff000000000000000000000000000000000000000000a61dccc6c6e34c8fbf14527386ca35589e9b8c278ac76a51cc950d9822d68b83fe1ad97b32cd580d55d398326f99059ff775485246999027b31979550000000000000000000000000000000000000000000000000000000000000000\\\",\\\"callGasLimit\\\":\\\"0x3d090\\\",\\\"verificationGasLimit\\\":\\\"0x33450\\\",\\\"preVerificationGas\\\":\\\"0x5208\\\",\\\"maxFeePerGas\\\":\\\"0xca0f4b80\\\",\\\"maxPriorityFeePerGas\\\":\\\"0xca0f4b80\\\",\\\"paymasterAndData\\\":\\\"0x\\\",\\\"signature\\\":\\\"0xe40feabf0db82ac3938ccce87d3cd45d071198c69285c09d482171d3030115b85e1bc9c8d1ce02358af3aaca1b31beb34cfb90b2e73890ff99bc42fbfcc87f681c\\\"},\\\"0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789\\\",{\\\"type\\\":\\\"payg\\\"}],\\\"id\\\":42,\\\"jsonrpc\\\":\\\"2.0\\\"}\", requestMethod=\"POST\", url=\"https://api.stackup.sh/v1/paymaster/63f154b576456796525ac322ffc5522ea1869043a5fea5cea3024e8894cd58f9\", code=SERVER_ERROR, version=web/5.7.1)"
+            }
+          }
+        ],
+        "estimate": {
+          "time": 0.5,
+          "costUsd": 0.417833,
+          "ethGas": "0",
+          "maticGas": "0",
+          "bscGas": "1348272000000000",
+          "solGas": "0"
+        }
+      },
+      {
+        "description": "Transfer to target",
+        "status": "PENDING",
+        "afterBalances": [
+          {
+            "address": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+            "amount": "90282297884047300",
+            "price": "90282",
+            "chain": "BINANCE",
+            "tokenMetadata": {
+              "chain": "BINANCE",
+              "symbol": "USDC",
+              "name": "USD Coin (PoS)",
+              "decimals": 18,
+              "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+              "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+            }
+          },
+          {
+            "address": "0xa81d8dd4550ee126ab77de7845b4359aa7afae22",
+            "amount": "15003628251175686",
+            "price": "15012",
+            "chain": "BINANCE",
+            "tokenMetadata": {
+              "chain": "BINANCE",
+              "symbol": "BSC-USD",
+              "name": "BSC-USD",
+              "decimals": 18,
+              "address": "0x55d398326f99059fF775485246999027B3197955",
+              "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "estimate": {
+              "time": 1,
+              "costUsd": 0.019529,
+              "ethGas": "0",
+              "maticGas": "0",
+              "bscGas": "63000000000000",
+              "solGas": "0"
+            },
+            "transferData": {
+              "fromChain": "BINANCE",
+              "fromAmount": "149999999999999994",
+              "fromAddress": "0xa81D8dD4550Ee126Ab77De7845b4359AA7afae22",
+              "fromToken": {
+                "chain": "BINANCE",
+                "symbol": "BSC-USD",
+                "name": "BSC-USD",
+                "decimals": 18,
+                "address": "0x55d398326f99059fF775485246999027B3197955",
+                "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+              },
+              "toAddress": "0xF8B56939fF7246142211Ab7b136EB2Ea061046e5",
+              "smartWallet": true
+            },
+            "status": "PENDING",
+            "type": "TRANSFER"
+          }
+        ],
+        "estimate": {
+          "time": 1,
+          "costUsd": 0.019529,
+          "ethGas": "0",
+          "maticGas": "0",
+          "bscGas": "63000000000000",
+          "solGas": "0"
+        }
+      }
+    ]
+  },
+  "updatedAt": 1684344621924
+}

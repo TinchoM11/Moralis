@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@imtbl/core-sdk": "^2.0.0",
+    "@imtbl/imx-sdk": "^1.43.3",
+    "@solana/web3.js": "^1.77.3",
+    "alchemy-sdk": "^2.9.0",
     "axios": "^1.4.0",
     "ethers": "4.0",
-    "web3": "^1.9.0"
+    "web3": "^1.10.0"
   }
 }

@@ -1,0 +1,525 @@
+{
+  "id": "9840a450419",
+  "batches": [
+    {
+      "description": "Bridge ETH from L1 to L2 (IMX)",
+      "status": "SUCCESS",
+      "afterBalances": [
+        {
+          "address": "0x035D35aDDdbfce7A80Daf81811a3Cc4C7D6a4688",
+          "amount": { "type": "BigNumber", "hex": "0x01b95b8ecac6d8" },
+          "price": { "type": "BigNumber", "hex": "0x0e1f89" },
+          "chain": "ETHEREUM",
+          "tokenMetadata": {
+            "chain": "ETHEREUM",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "decimals": 18,
+            "name": "Ethereum",
+            "symbol": "ETH"
+          }
+        },
+        {
+          "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+          "amount": { "type": "BigNumber", "hex": "0x49e8acf3ee71c9" },
+          "price": { "type": "BigNumber", "hex": "0x025d691b" },
+          "chain": "ETHEREUM",
+          "tokenMetadata": {
+            "chain": "ETHEREUM",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "decimals": 18,
+            "name": "Ethereum",
+            "symbol": "ETH"
+          }
+        },
+        {
+          "address": "0xd3564d4c3ce55d4cb9694cdace90547f7e7c8628",
+          "amount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+          "price": { "type": "BigNumber", "hex": "0x2ba79b" },
+          "chain": "IMMUTABLE",
+          "tokenMetadata": {
+            "chain": "IMMUTABLE",
+            "address": "0x0000000000000000000000000000000000000000",
+            "decimals": 18,
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "name": "Ethereum",
+            "symbol": "ETH"
+          }
+        },
+        {
+          "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+          "amount": { "type": "BigNumber", "hex": "0x29a2241af62c0000" },
+          "price": { "type": "BigNumber", "hex": "0x1e919c" },
+          "chain": "POLYGON",
+          "tokenMetadata": {
+            "chain": "POLYGON",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
+            "decimals": 18,
+            "name": "Matic",
+            "symbol": "MATIC"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "bridgeData": {
+            "quote": {
+              "rawQuote": {
+                "fromChain": "ETHEREUM",
+                "fromTokenAddress": "0x0000000000000000000000000000000000000000",
+                "toChain": "IMMUTABLE",
+                "fromAmount": {
+                  "type": "BigNumber",
+                  "hex": "0x05543df729c000"
+                },
+                "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "toAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628"
+              },
+              "service": "imx",
+              "fromAmount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+              "fromToken": {
+                "chain": "ETHEREUM",
+                "address": "0x0000000000000000000000000000000000000000",
+                "decimals": 18,
+                "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+                "name": "Ethereum",
+                "symbol": "ETH"
+              },
+              "toAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+              "toAmount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+              "toToken": {
+                "chain": "IMMUTABLE",
+                "address": "0x0000000000000000000000000000000000000000",
+                "decimals": 18,
+                "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+                "name": "Ethereum",
+                "symbol": "ETH"
+              },
+              "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+              "fromChain": "ETHEREUM",
+              "toChain": "IMMUTABLE",
+              "estimatedTime": 1,
+              "estimatedCostUSD": 287742891270061,
+              "estimatedEthGas": {
+                "type": "BigNumber",
+                "hex": "0xb5e620f48000"
+              },
+              "estimatedMatGas": { "type": "BigNumber", "hex": "0x00" },
+              "estimatedOptGas": { "type": "BigNumber", "hex": "0x00" },
+              "estimatedAvaxGas": { "type": "BigNumber", "hex": "0x00" },
+              "estimatedArbGas": { "type": "BigNumber", "hex": "0x00" },
+              "estimatedBscGas": { "type": "BigNumber", "hex": "0x00" },
+              "estimatedSolGas": { "type": "BigNumber", "hex": "0x00" }
+            },
+            "wallets": {
+              "ETHEREUM": {
+                "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "isImported": false,
+                "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "type": "EOA",
+                "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+              },
+              "OPTIMISM": {
+                "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "isImported": false,
+                "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "type": "EOA",
+                "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+              },
+              "POLYGON": {
+                "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "isImported": false,
+                "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "type": "SmartWallet"
+              },
+              "SOLANA": {
+                "address": "5NawWX3VK2qM4njd8Po2rP3SpcLLczJwQoy8abpczyAZ",
+                "isImported": false,
+                "chains": ["SOLANA"],
+                "publicKey": "5NawWX3VK2qM4njd8Po2rP3SpcLLczJwQoy8abpczyAZ",
+                "type": "EOA"
+              },
+              "AVALANCHE": {
+                "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "isImported": false,
+                "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "type": "SmartWallet"
+              },
+              "IMMUTABLE": {
+                "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "isImported": false,
+                "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "type": "EOA",
+                "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+              },
+              "BINANCE": {
+                "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "isImported": false,
+                "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "type": "SmartWallet"
+              },
+              "ARBITRUM": {
+                "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "isImported": false,
+                "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                "type": "SmartWallet"
+              }
+            }
+          },
+          "estimate": {
+            "time": 1,
+            "costUsd": 287742891270061,
+            "ethGas": { "type": "BigNumber", "hex": "0xb5e620f48000" },
+            "maticGas": { "type": "BigNumber", "hex": "0x00" },
+            "optGas": { "type": "BigNumber", "hex": "0x00" },
+            "avaxGas": { "type": "BigNumber", "hex": "0x00" },
+            "arbGas": { "type": "BigNumber", "hex": "0x00" },
+            "bscGas": { "type": "BigNumber", "hex": "0x00" },
+            "solGas": { "type": "BigNumber", "hex": "0x00" }
+          },
+          "status": "SUCCESS",
+          "type": "BRIDGE",
+          "bridgeResponse": {
+            "data": {
+              "quote": {
+                "rawQuote": {
+                  "fromChain": "ETHEREUM",
+                  "fromTokenAddress": "0x0000000000000000000000000000000000000000",
+                  "toChain": "IMMUTABLE",
+                  "fromAmount": {
+                    "type": "BigNumber",
+                    "hex": "0x05543df729c000"
+                  },
+                  "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "toAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628"
+                },
+                "service": "imx",
+                "fromAmount": {
+                  "type": "BigNumber",
+                  "hex": "0x05543df729c000"
+                },
+                "fromToken": {
+                  "chain": "ETHEREUM",
+                  "address": "0x0000000000000000000000000000000000000000",
+                  "decimals": 18,
+                  "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+                  "name": "Ethereum",
+                  "symbol": "ETH"
+                },
+                "toAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "toAmount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+                "toToken": {
+                  "chain": "IMMUTABLE",
+                  "address": "0x0000000000000000000000000000000000000000",
+                  "decimals": 18,
+                  "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+                  "name": "Ethereum",
+                  "symbol": "ETH"
+                },
+                "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                "fromChain": "ETHEREUM",
+                "toChain": "IMMUTABLE",
+                "estimatedTime": 1,
+                "estimatedCostUSD": 287742891270061,
+                "estimatedEthGas": {
+                  "type": "BigNumber",
+                  "hex": "0xb5e620f48000"
+                },
+                "estimatedMatGas": { "type": "BigNumber", "hex": "0x00" },
+                "estimatedOptGas": { "type": "BigNumber", "hex": "0x00" },
+                "estimatedAvaxGas": { "type": "BigNumber", "hex": "0x00" },
+                "estimatedArbGas": { "type": "BigNumber", "hex": "0x00" },
+                "estimatedBscGas": { "type": "BigNumber", "hex": "0x00" },
+                "estimatedSolGas": { "type": "BigNumber", "hex": "0x00" }
+              },
+              "wallets": {
+                "ETHEREUM": {
+                  "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                  "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "isImported": false,
+                  "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "type": "EOA",
+                  "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+                },
+                "OPTIMISM": {
+                  "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                  "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "isImported": false,
+                  "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "type": "EOA",
+                  "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+                },
+                "POLYGON": {
+                  "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "isImported": false,
+                  "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                  "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "type": "SmartWallet"
+                },
+                "SOLANA": {
+                  "address": "5NawWX3VK2qM4njd8Po2rP3SpcLLczJwQoy8abpczyAZ",
+                  "isImported": false,
+                  "chains": ["SOLANA"],
+                  "publicKey": "5NawWX3VK2qM4njd8Po2rP3SpcLLczJwQoy8abpczyAZ",
+                  "type": "EOA"
+                },
+                "AVALANCHE": {
+                  "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "isImported": false,
+                  "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                  "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "type": "SmartWallet"
+                },
+                "IMMUTABLE": {
+                  "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85",
+                  "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "isImported": false,
+                  "publicKey": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+                  "type": "EOA",
+                  "chains": ["ETHEREUM", "OPTIMISM", "IMMUTABLE"]
+                },
+                "BINANCE": {
+                  "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "isImported": false,
+                  "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                  "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "type": "SmartWallet"
+                },
+                "ARBITRUM": {
+                  "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "isImported": false,
+                  "chains": ["POLYGON", "AVALANCHE", "BINANCE", "ARBITRUM"],
+                  "publicKey": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+                  "type": "SmartWallet"
+                }
+              },
+              "bridgeTx": "0x37ce4efc08eb0f1d262eef0cc3c27f636301f906dfdca6ca527058dc888fdcef",
+              "redeemTx": null,
+              "postVaaTx": null,
+              "userOperationHash": null,
+              "approveTx": null,
+              "bridgeStatus": "SUCCESS",
+              "redeemStatus": "SUCCESS",
+              "approveStatus": "SUCCESS",
+              "status": "SUCCESS"
+            },
+            "error": null
+          }
+        }
+      ],
+      "estimate": {
+        "time": 1,
+        "costUsd": 287742891270061,
+        "ethGas": { "type": "BigNumber", "hex": "0xb5e620f48000" },
+        "maticGas": { "type": "BigNumber", "hex": "0x00" },
+        "optGas": { "type": "BigNumber", "hex": "0x00" },
+        "avaxGas": { "type": "BigNumber", "hex": "0x00" },
+        "arbGas": { "type": "BigNumber", "hex": "0x00" },
+        "bscGas": { "type": "BigNumber", "hex": "0x00" },
+        "solGas": { "type": "BigNumber", "hex": "0x00" }
+      }
+    },
+    {
+      "description": "Transfer to target",
+      "status": "SUCCESS",
+      "afterBalances": [
+        {
+          "address": "0x035D35aDDdbfce7A80Daf81811a3Cc4C7D6a4688",
+          "amount": { "type": "BigNumber", "hex": "0x01b95b8ecac6d8" },
+          "price": { "type": "BigNumber", "hex": "0x0e1f89" },
+          "chain": "ETHEREUM",
+          "tokenMetadata": {
+            "chain": "ETHEREUM",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "decimals": 18,
+            "name": "Ethereum",
+            "symbol": "ETH"
+          }
+        },
+        {
+          "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+          "amount": { "type": "BigNumber", "hex": "0x49e8acf3ee71c9" },
+          "price": { "type": "BigNumber", "hex": "0x025d691b" },
+          "chain": "ETHEREUM",
+          "tokenMetadata": {
+            "chain": "ETHEREUM",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+            "decimals": 18,
+            "name": "Ethereum",
+            "symbol": "ETH"
+          }
+        },
+        {
+          "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+          "amount": { "type": "BigNumber", "hex": "0x29a2241af62c0000" },
+          "price": { "type": "BigNumber", "hex": "0x1e919c" },
+          "chain": "POLYGON",
+          "tokenMetadata": {
+            "chain": "POLYGON",
+            "address": "0x0000000000000000000000000000000000000000",
+            "logoURI": "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
+            "decimals": 18,
+            "name": "Matic",
+            "symbol": "MATIC"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "estimate": {
+            "time": 1,
+            "costUsd": 0.000085,
+            "ethGas": { "type": "BigNumber", "hex": "0x00" },
+            "maticGas": { "type": "BigNumber", "hex": "0x0a7a358200" },
+            "avaxGas": { "type": "BigNumber", "hex": "0x00" },
+            "arbGas": { "type": "BigNumber", "hex": "0x00" },
+            "bscGas": { "type": "BigNumber", "hex": "0x00" },
+            "solGas": { "type": "BigNumber", "hex": "0x00" },
+            "optGas": { "type": "BigNumber", "hex": "0x00" }
+          },
+          "transferData": {
+            "fromChain": "IMMUTABLE",
+            "fromAmount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+            "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+            "fromToken": {
+              "symbol": "ETH",
+              "chain": "IMMUTABLE",
+              "address": "0x0000000000000000000000000000000000000000",
+              "decimals": "18",
+              "name": "Ethereum",
+              "logoURI": "https://design-system.immutable.com/hosted-for-ds/currency-icons/currency--eth.svg"
+            },
+            "toAddress": "0x48005093630924663e86bb2C254C246cce8d106E",
+            "smartWallet": false,
+            "starkPrivateKey": "402e2eb2b5e5afca9f01b5ef20a1b34b51f40b93cbfaad869235e9a75f27c85"
+          },
+          "status": "SUCCESS",
+          "type": "TRANSFER",
+          "transferResponse": {
+            "data": {
+              "fromChain": "IMMUTABLE",
+              "fromAddress": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+              "fromAmount": { "type": "BigNumber", "hex": "0x05543df729c000" },
+              "fromTokenAddress": "0x0000000000000000000000000000000000000000",
+              "status": "SUCCESS",
+              "toAddress": "0x48005093630924663e86bb2C254C246cce8d106E",
+              "transferType": "SYSTEM",
+              "userOperationHash": null,
+              "hash": "229284267",
+              "sponsoredFee": false,
+              "fee": { "type": "BigNumber", "hex": "0x00" },
+              "rawRecipient": {
+                "transaction_id": 229284267,
+                "status": "success",
+                "user": "0xd3564d4c3ce55d4cb9694cdace90547f7e7c8628",
+                "receiver": "0x48005093630924663e86bb2c254c246cce8d106e",
+                "token": {
+                  "type": "ETH",
+                  "data": {
+                    "token_id": "",
+                    "id": "",
+                    "token_address": "",
+                    "decimals": 18,
+                    "quantity": "1500000000000000",
+                    "quantity_with_fees": ""
+                  }
+                },
+                "timestamp": "2023-07-05T19:00:19.416592Z"
+              }
+            },
+            "error": null
+          }
+        }
+      ],
+      "estimate": {
+        "time": 1,
+        "costUsd": 0.000085,
+        "ethGas": { "type": "BigNumber", "hex": "0x00" },
+        "maticGas": { "type": "BigNumber", "hex": "0x0a7a358200" },
+        "optGas": { "type": "BigNumber", "hex": "0x00" },
+        "avaxGas": { "type": "BigNumber", "hex": "0x00" },
+        "arbGas": { "type": "BigNumber", "hex": "0x00" },
+        "bscGas": { "type": "BigNumber", "hex": "0x00" },
+        "solGas": { "type": "BigNumber", "hex": "0x00" }
+      }
+    }
+  ],
+  "status": "SUCCESS",
+  "toToken": {
+    "symbol": "ETH",
+    "chain": "IMMUTABLE",
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": "18",
+    "name": "Ethereum",
+    "logoURI": "https://design-system.immutable.com/hosted-for-ds/currency-icons/currency--eth.svg"
+  },
+  "toAddress": "0x48005093630924663e86bb2C254C246cce8d106E",
+  "toChain": "IMMUTABLE",
+  "fromBalances": [
+    {
+      "address": "0x035D35aDDdbfce7A80Daf81811a3Cc4C7D6a4688",
+      "amount": { "type": "BigNumber", "hex": "0x01b95b8ecac6d8" },
+      "price": { "type": "BigNumber", "hex": "0x0e1f89" },
+      "chain": "ETHEREUM",
+      "tokenMetadata": {
+        "chain": "ETHEREUM",
+        "address": "0x0000000000000000000000000000000000000000",
+        "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+        "decimals": 18,
+        "name": "Ethereum",
+        "symbol": "ETH"
+      }
+    },
+    {
+      "address": "0xD3564d4C3cE55D4cB9694CDAcE90547F7e7c8628",
+      "amount": { "type": "BigNumber", "hex": "0x4f3ceaeb1831c9" },
+      "price": { "type": "BigNumber", "hex": "0x02891157" },
+      "chain": "ETHEREUM",
+      "tokenMetadata": {
+        "chain": "ETHEREUM",
+        "address": "0x0000000000000000000000000000000000000000",
+        "logoURI": "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+        "decimals": 18,
+        "name": "Ethereum",
+        "symbol": "ETH"
+      }
+    },
+    {
+      "address": "0xb93Bad01CE69496ACB82870e18cf706d7cc6675C",
+      "amount": { "type": "BigNumber", "hex": "0x29a2241af62c0000" },
+      "price": { "type": "BigNumber", "hex": "0x1e919c" },
+      "chain": "POLYGON",
+      "tokenMetadata": {
+        "chain": "POLYGON",
+        "address": "0x0000000000000000000000000000000000000000",
+        "logoURI": "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
+        "decimals": 18,
+        "name": "Matic",
+        "symbol": "MATIC"
+      }
+    }
+  ],
+  "toAmount": "1500000000000000",
+  "estimate": {
+    "time": 2,
+    "costUsd": 287742891270061,
+    "ethGas": { "type": "BigNumber", "hex": "0xb5e620f48000" },
+    "maticGas": { "type": "BigNumber", "hex": "0x0a7a358200" },
+    "optGas": { "type": "BigNumber", "hex": "0x00" },
+    "avaxGas": { "type": "BigNumber", "hex": "0x00" },
+    "arbGas": { "type": "BigNumber", "hex": "0x00" },
+    "bscGas": { "type": "BigNumber", "hex": "0x00" },
+    "solGas": { "type": "BigNumber", "hex": "0x00" }
+  }
+}

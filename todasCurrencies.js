@@ -12,7 +12,7 @@ maxBodyLength: Infinity,
 axios(config)
 .then(function (response) {
   response.data.map((t) =>
-    t.network.includes("AVAX-C") && console.log(t))})
+    t.symbol.includes("eos") && console.log(t))})
   
 
 .catch(function (error) {
